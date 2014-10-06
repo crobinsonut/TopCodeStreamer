@@ -10,10 +10,13 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
+
 import topcodes.Scanner;
 import topcodes.TopCode;
 
+@SuppressWarnings("serial")
 public class Panel extends JPanel implements KeyListener {
 	private BufferedImage image;
 	boolean shutdown = false;
@@ -52,7 +55,8 @@ public class Panel extends JPanel implements KeyListener {
 		this.repaint();
 	}
 	public static void main(String args[]) {
-		System.load("C:\\opencv\\build\\java\\x86\\opencv_java249.dll");
+		//System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+		//System.load("C:\\opencv\\build\\java\\x86\\opencv_java249.dll");
 		JFrame frame = new JFrame("BasicPanel");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(400, 400);
@@ -75,7 +79,7 @@ public class Panel extends JPanel implements KeyListener {
 
 					if (topcodes != null && !topcodes.isEmpty()) {
 						TopCode code = topcodes.get(0);
-						System.out.format("<x=%f, y=%f>%n", code.getCenterX(), code.getCenterY());
+						System.out.format("<id=%d, x=%f, y=%f>%n", code.getCode(), code.getCenterX(), code.getCenterY());
 					}
 				}
 			}

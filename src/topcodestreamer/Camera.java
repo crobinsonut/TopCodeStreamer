@@ -28,6 +28,7 @@ public class Camera {
 	}
 	
 	public Camera(int deviceId){
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		this.deviceId = deviceId;
 	}
 	

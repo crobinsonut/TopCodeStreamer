@@ -10,14 +10,13 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import org.opencv.core.Core;
 import org.opencv.core.Mat;
 
 import topcodes.Scanner;
 import topcodes.TopCode;
 
 @SuppressWarnings("serial")
-public class Panel extends JPanel implements KeyListener {
+public class Panel extends JPanel implements KeyListener{
 	private BufferedImage image;
 	boolean shutdown = false;
 

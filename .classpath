@@ -10,5 +10,6 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="topcodestreamer/native"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/Distributor"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

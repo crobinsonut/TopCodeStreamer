@@ -1,13 +1,21 @@
 package topcodestreamer;
 
+import java.awt.image.BufferedImage;
+import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+
 import org.eclipse.jetty.websocket.servlet.ServletUpgradeRequest;
 import org.eclipse.jetty.websocket.servlet.ServletUpgradeResponse;
 import org.eclipse.jetty.websocket.servlet.WebSocketCreator;
 
+import topcodes.TopCode;
+import async.AsynchronousWorker;
+import base.Distributor;
+
 public class SocketCreator implements WebSocketCreator{
-	private CameraDaemon daemon;
+	private TopCodeDaemon daemon;
 	
-	public SocketCreator(CameraDaemon daemon){
+	public SocketCreator(TopCodeDaemon daemon){
 		this.daemon = daemon;
 	}
 	
@@ -15,10 +23,10 @@ public class SocketCreator implements WebSocketCreator{
 	public Object createWebSocket(ServletUpgradeRequest arg0,
 			ServletUpgradeResponse arg1) {
 		// TODO Auto-generated method stub
-		TopCodeHandler socket = new TopCodeHandler();
-		this.daemon.addHandler(socket);
-		
-		return socket;
+		//ArrayBlockingQueue<BufferedImage> imageQueue = new ArrayBlockingQueue<BufferedImage>(10);
+		//this.daemon.register(imageQueue);
+				
+		return new EventSocket(daemon);
 	}
 
 }

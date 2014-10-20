@@ -1,7 +1,6 @@
 package topcodestreamer;
 
 import java.awt.image.BufferedImage;
-import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -9,12 +8,6 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-
-import async.AsynchronousDistributor;
-import async.AsynchronousGenerator;
-import base.Distributor;
-import base.Generator;
-import topcodes.TopCode;
 
 public class Example {
 	public static void main(String[] args) throws Exception {

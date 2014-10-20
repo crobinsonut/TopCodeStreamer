@@ -9,11 +9,6 @@ import java.util.concurrent.BlockingQueue;
 
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.WebSocketListener;
-import org.eclipse.jetty.websocket.servlet.ServletUpgradeRequest;
-import org.eclipse.jetty.websocket.servlet.ServletUpgradeResponse;
-import org.eclipse.jetty.websocket.servlet.WebSocketCreator;
-
-import base.Worker;
 import topcodes.Scanner;
 import topcodes.TopCode;
 

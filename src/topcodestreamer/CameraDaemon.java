@@ -1,13 +1,7 @@
 package topcodestreamer;
 
 import java.awt.image.BufferedImage;
-import java.util.List;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ConcurrentLinkedQueue;
-
-import base.Generator;
-import topcodes.Scanner;
-import topcodes.TopCode;
 
 public class CameraDaemon implements Runnable{
 	private Camera camera;

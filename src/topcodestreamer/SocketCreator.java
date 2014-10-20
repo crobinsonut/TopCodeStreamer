@@ -1,16 +1,8 @@
 package topcodestreamer;
 
-import java.awt.image.BufferedImage;
-import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
-
 import org.eclipse.jetty.websocket.servlet.ServletUpgradeRequest;
 import org.eclipse.jetty.websocket.servlet.ServletUpgradeResponse;
 import org.eclipse.jetty.websocket.servlet.WebSocketCreator;
-
-import topcodes.TopCode;
-import async.AsynchronousWorker;
-import base.Distributor;
 
 public class SocketCreator implements WebSocketCreator{
 	private TopCodeDaemon daemon;

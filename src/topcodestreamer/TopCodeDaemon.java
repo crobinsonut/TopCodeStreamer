@@ -4,8 +4,6 @@ import java.awt.image.BufferedImage;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import base.Distributor;
-
 public class TopCodeDaemon implements Runnable{
 	private BlockingQueue<BufferedImage> imageQueue;
 	private ConcurrentLinkedQueue<BlockingQueue<BufferedImage>> queues;
